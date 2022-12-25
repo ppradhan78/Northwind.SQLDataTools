@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/Northwind.SQLDataTools/bin/Debug
+/Northwind.SQLDataTools/obj/Debug
