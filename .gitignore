@@ -5,3 +5,6 @@
 /.vs
 /Northwind.SQLDataTools/bin/Debug
 /Northwind.SQLDataTools/obj/Debug
+/ExistingNorthwind.SQLDataTools/bin/Debug
+/ExistingNorthwind.SQLDataTools/obj/Debug
+/ExistingNorthwind.SQLDataTools/Import Schema Logs

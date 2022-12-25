@@ -3,17 +3,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <Name>Northwind.SQLDataTools</Name>
+    <Name>ExistingNorthwind.SQLDataTools</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
-    <ProjectGuid>{9f15922f-90c5-4d3d-81f5-d2a2fa364b01}</ProjectGuid>
+    <ProjectGuid>{ad453412-926c-4eae-9b54-7e40a0efda42}</ProjectGuid>
     <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
-    <RootNamespace>Northwind.SQLDataTools</RootNamespace>
-    <AssemblyName>Northwind.SQLDataTools</AssemblyName>
-    <ModelCollation>1033, CI</ModelCollation>
+    <RootNamespace>ExistingNorthwind.SQLDataTools</RootNamespace>
+    <AssemblyName>ExistingNorthwind.SQLDataTools</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -22,6 +22,8 @@
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -56,26 +58,50 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
-    <Folder Include="dbo" />
-    <Folder Include="dbo\Tabels" />
-    <Folder Include="PublishProfile" />
-    <Folder Include="PostDeployScript" />
-    <Folder Include="dbo\View" />
-    <Folder Include="dbo\StoredProcedure" />
-    <Folder Include="dbo\Function" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Stored Procedures\" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="dbo\Tabels\Categories.sql" />
-    <Build Include="dbo\Tabels\Suppliers.sql" />
-    <Build Include="dbo\Tabels\Products.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <RefactorLog Include="Northwind.SQLDataTools.refactorlog" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="PublishProfile\Northwind.SQLDataTools.publish.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <PostDeploy Include="PostDeployScript\NorthwindPostDeployment.sql" />
+    <Build Include="dbo\Tables\Orders.sql" />
+    <Build Include="dbo\Tables\Products.sql" />
+    <Build Include="dbo\Tables\Order Details.sql" />
+    <Build Include="dbo\Tables\CustomerCustomerDemo.sql" />
+    <Build Include="dbo\Tables\CustomerDemographics.sql" />
+    <Build Include="dbo\Tables\Region.sql" />
+    <Build Include="dbo\Tables\Territories.sql" />
+    <Build Include="dbo\Tables\EmployeeTerritories.sql" />
+    <Build Include="dbo\Tables\Employees.sql" />
+    <Build Include="dbo\Tables\Categories.sql" />
+    <Build Include="dbo\Tables\Customers.sql" />
+    <Build Include="dbo\Tables\Shippers.sql" />
+    <Build Include="dbo\Tables\Suppliers.sql" />
+    <Build Include="dbo\Views\Customer and Suppliers by City.sql" />
+    <Build Include="dbo\Views\Alphabetical list of products.sql" />
+    <Build Include="dbo\Views\Current Product List.sql" />
+    <Build Include="dbo\Views\Orders Qry.sql" />
+    <Build Include="dbo\Views\Products Above Average Price.sql" />
+    <Build Include="dbo\Views\Products by Category.sql" />
+    <Build Include="dbo\Views\Quarterly Orders.sql" />
+    <Build Include="dbo\Views\Invoices.sql" />
+    <Build Include="dbo\Views\Order Details Extended.sql" />
+    <Build Include="dbo\Views\Order Subtotals.sql" />
+    <Build Include="dbo\Views\Product Sales for 1997.sql" />
+    <Build Include="dbo\Views\Category Sales for 1997.sql" />
+    <Build Include="dbo\Views\Sales by Category.sql" />
+    <Build Include="dbo\Views\Sales Totals by Amount.sql" />
+    <Build Include="dbo\Views\Summary of Sales by Quarter.sql" />
+    <Build Include="dbo\Views\Summary of Sales by Year.sql" />
+    <Build Include="Security\ppradhan.sql" />
+    <Build Include="Security\ppradhan_1.sql" />
+    <Build Include="dbo\Stored Procedures\Ten Most Expensive Products.sql" />
+    <Build Include="dbo\Stored Procedures\Employee Sales by Country.sql" />
+    <Build Include="dbo\Stored Procedures\Sales by Year.sql" />
+    <Build Include="dbo\Stored Procedures\CustOrdersDetail.sql" />
+    <Build Include="dbo\Stored Procedures\CustOrdersOrders.sql" />
+    <Build Include="dbo\Stored Procedures\CustOrderHist.sql" />
+    <Build Include="dbo\Stored Procedures\SalesByCategory.sql" />
   </ItemGroup>
 </Project>
